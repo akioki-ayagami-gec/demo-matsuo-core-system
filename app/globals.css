@@ -1,0 +1,183 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Light mode design tokens */
+  --background: #ffffff; /* Light background */
+  --foreground: #1f2937; /* Dark text */
+  --card: rgba(255, 255, 255, 0.9); /* Light card */
+  --card-foreground: #1f2937; /* Dark card text */
+  --popover: rgba(255, 255, 255, 0.95); /* Light popover */
+  --popover-foreground: #1f2937; /* Dark popover text */
+  --primary: #0891b2; /* Primary actions */
+  --primary-foreground: #ffffff; /* Primary text */
+  --secondary: #f59e0b; /* Accent actions */
+  --secondary-foreground: #ffffff; /* Accent text */
+  --muted: #9ca3af; /* Muted text */
+  --muted-foreground: #6b7280; /* Muted text on light */
+  --accent: #f59e0b; /* Accent color */
+  --accent-foreground: #ffffff; /* Text on accent */
+  --destructive: #dc2626; /* Destructive actions */
+  --destructive-foreground: #ffffff; /* Destructive text */
+  --border: #e5e7eb; /* Light border */
+  --input: #f9fafb; /* Light input background */
+  --ring: rgba(8, 145, 178, 0.3); /* Focus ring */
+  --chart-1: #0891b2; /* Chart color 1 */
+  --chart-2: #f59e0b; /* Chart color 2 */
+  --chart-3: #dc2626; /* Chart color 3 */
+  --chart-4: #15803d; /* Chart color 4 */
+  --chart-5: #6b7280; /* Chart color 5 */
+  --radius: 0.75rem; /* For rounded corners */
+  --sidebar: #f8fafc; /* Light sidebar background */
+  --sidebar-foreground: #1f2937; /* Dark sidebar text */
+  --sidebar-primary: rgba(8, 145, 178, 0.1); /* Sidebar primary actions */
+  --sidebar-primary-foreground: #0891b2; /* Sidebar primary text */
+  --sidebar-accent: #f59e0b; /* Sidebar accent */
+  --sidebar-accent-foreground: #ffffff; /* Sidebar accent text */
+  --sidebar-border: #e5e7eb; /* Light sidebar border */
+  --sidebar-ring: rgba(8, 145, 178, 0.3); /* Sidebar focus ring */
+}
+
+.dark {
+  /* Dark mode tokens */
+  --background: #1a1a1a;
+  --foreground: #f9fafb;
+  --card: rgba(255, 255, 255, 0.1);
+  --card-foreground: #ffffff;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #1f2937;
+  --primary: #0891b2;
+  --primary-foreground: #ffffff;
+  --secondary: #f59e0b;
+  --secondary-foreground: #1f2937;
+  --muted: #4b5563;
+  --muted-foreground: #f9fafb;
+  --accent: #f59e0b;
+  --accent-foreground: #1a1a1a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #2a2a2a;
+  --ring: rgba(8, 145, 178, 0.5);
+  --chart-1: #0891b2;
+  --chart-2: #f59e0b;
+  --chart-3: #dc2626;
+  --chart-4: #15803d;
+  --chart-5: #4b5563;
+  --radius: 0.75rem; /* For rounded corners */
+  --sidebar: #1f2937;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: rgba(8, 145, 178, 0.1);
+  --sidebar-primary-foreground: #0891b2;
+  --sidebar-accent: #f59e0b;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #374151;
+  --sidebar-ring: rgba(8, 145, 178, 0.5);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* より明確な背景グラデーションでテーマ切り替えを視覚化 */
+    background: linear-gradient(
+      135deg,
+      var(--background) 0%,
+      color-mix(in srgb, var(--background) 85%, var(--primary) 15%) 50%,
+      color-mix(in srgb, var(--background) 90%, var(--secondary) 10%) 100%
+    );
+    min-height: 100vh;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* HTML要素にもテーマ切り替えアニメーションを追加 */
+  html {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* テーマ切り替えを強制的に適用するためのクラス */
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html:not(.dark) {
+    color-scheme: light;
+  }
+}
+
+/* Added glassmorphism and modern card effects */
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-md bg-card/80 border border-border/30;
+    /* より明確なガラス効果とシャドウ */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* ダークモード時のガラス効果を強化 */
+  .dark .glass-card {
+    @apply bg-card/20;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .modern-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/30 rounded-xl;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .gradient-border {
+    background: linear-gradient(135deg, rgba(8, 145, 178, 0.3), rgba(245, 158, 11, 0.3));
+    padding: 1px;
+    border-radius: 0.75rem;
+  }
+
+  .gradient-border > * {
+    @apply bg-card rounded-xl;
+  }
+}
