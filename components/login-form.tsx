@@ -80,16 +80,16 @@ export function LoginForm() {
         <CardHeader className="text-center space-y-4">
           <div className="flex justify-center">
             <Image
-              src="/images/seki-logo-login.png"
-              alt="セキ株式会社"
-              width={120}
+              src="https://kk-matsuo-ss.co.jp/wp-corp/wp-content/uploads/2023/05/img-matsuo.jpg"
+              alt="株式会社松尾製作所"
+              width={2400}
               height={80}
               className="object-contain"
             />
           </div>
           <div>
-            <CardTitle className="text-2xl font-bold text-foreground">Sシステム</CardTitle>
-            <CardDescription className="text-muted-foreground">セキ株式会社 統合管理システム</CardDescription>
+            <CardTitle className="text-2xl font-bold text-foreground">生産管理システム</CardTitle>
+            <CardDescription className="text-muted-foreground">株式会社松尾製作所 生産管理システム</CardDescription>
           </div>
         </CardHeader>
         <CardContent>

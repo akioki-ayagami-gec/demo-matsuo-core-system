@@ -23,11 +23,11 @@ export function SystemSettings() {
 
   // Mock settings data
   const [generalSettings, setGeneralSettings] = useState({
-    companyName: "セキ株式会社",
-    companyAddress: "愛媛県松山市○○町1-2-3",
+    companyName: "株式会社松尾製作所",
+    companyAddress: "愛知県大府市北崎町井田27番地1",
     companyPhone: "089-123-4567",
-    companyEmail: "info@seki-corp.co.jp",
-    systemName: "Sシステム",
+    companyEmail: "info@kk-matsuo-ss.co.jp",
+    systemName: "生産管理システム",
     timezone: "Asia/Tokyo",
     language: "ja",
     dateFormat: "YYYY-MM-DD",

@@ -11,11 +11,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "セキ株式会社 Sシステム",
-  description: "セキ株式会社の統合Sシステム - 生産管理・受注管理・帳票管理",
+  title: "株式会社松尾製作所 生産管理システムシステム",
+  description: "株式会社松尾製作所の生産管理システムです。",
   generator: "v0.app",
-  keywords: "Sシステム,生産管理,受注管理,帳票管理,印刷業,セキ株式会社",
-  authors: [{ name: "セキ株式会社" }],
+  keywords: "生産管理,受注管理,帳票管理,株式会社松尾製作所",
+  authors: [{ name: "株式会社松尾製作所" }],
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
   themeColor: "#164e63",
 }

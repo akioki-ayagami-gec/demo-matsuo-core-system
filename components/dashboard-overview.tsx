@@ -116,7 +116,7 @@ export function DashboardOverview() {
           <div>
             <p className="font-medium text-primary">システム統合完了</p>
             <p className="text-sm text-muted-foreground">
-              セキ株式会社Sシステムの全モジュールが正常に稼働しています。生産管理、受注管理、帳票管理の各機能をご利用いただけます。
+              全モジュールが正常に稼働しています。生産管理、受注管理、帳票管理の各機能をご利用いただけます。
             </p>
           </div>
         </div>

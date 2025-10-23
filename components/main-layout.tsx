@@ -62,10 +62,10 @@ export function MainLayout({ children, currentPage }: MainLayoutProps) {
           <div className="flex items-center justify-center p-6 border-b border-sidebar-border/30">
             <div className="flex items-center justify-center">
               <Image
-                src="/images/seki-logo-updated.png"
-                alt="セキ株式会社"
-                width={72}
-                height={48}
+                src="https://kk-matsuo-ss.co.jp/wp-corp/wp-content/uploads/2023/05/img-matsuo.jpg"
+                alt="株式会社松尾製作所"
+                width={240}
+                height={30}
                 className="object-contain"
               />
             </div>
@@ -89,11 +89,10 @@ export function MainLayout({ children, currentPage }: MainLayoutProps) {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${
-                        isActive
-                          ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30 shadow-lg"
-                          : "text-sidebar-foreground hover:bg-sidebar-primary hover:text-sidebar-primary-foreground hover:shadow-md backdrop-blur-sm"
-                      }`}
+                      className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${isActive
+                        ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30 shadow-lg"
+                        : "text-sidebar-foreground hover:bg-sidebar-primary hover:text-sidebar-primary-foreground hover:shadow-md backdrop-blur-sm"
+                        }`}
                     >
                       {/* Icon with color applied */}
                       <Icon className={`h-5 w-5 ${isActive ? "" : item.color}`} />
