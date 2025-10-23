@@ -60,7 +60,7 @@ const transportTasks = [
     fromLocation: "生産エリアA",
     toLocation: "自動倉庫ラック-B15",
     palletId: "PLT-2024-001",
-    productInfo: "松山市役所 広報誌 5000部",
+    productInfo: "トヨタ向け圧縮ばね 5000個",
     assignedAGF: "AGF001",
     status: "in-progress",
     createdAt: "2024-01-16 09:30",
@@ -71,10 +71,10 @@ const transportTasks = [
     id: "TT002",
     type: "direct",
     priority: "medium",
-    fromLocation: "印刷工程",
-    toLocation: "製本工程",
+    fromLocation: "加工工程",
+    toLocation: "組立工程",
     palletId: "PLT-2024-002",
-    productInfo: "企業パンフレット 3000部",
+    productInfo: "板ばね部品 3000個",
     assignedAGF: "AGF002",
     status: "pending",
     createdAt: "2024-01-16 10:15",
@@ -88,7 +88,7 @@ const transportTasks = [
     fromLocation: "品質検査エリア",
     toLocation: "出荷エリア",
     palletId: "PLT-2024-003",
-    productInfo: "緊急案件 チラシ 1000部",
+    productInfo: "緊急案件 引張ばね 1000個",
     assignedAGF: null,
     status: "waiting",
     createdAt: "2024-01-16 11:00",
@@ -103,7 +103,7 @@ const palletLocations = [
     type: "product",
     status: "in-transit",
     currentLocation: "AGF001搭載中",
-    productInfo: "松山市役所 広報誌 5000部",
+    productInfo: "トヨタ向け圧縮ばね 5000個",
     weight: 125.5,
     dimensions: "120x80x60cm",
     lastMoved: "2024-01-16 09:30",
@@ -113,8 +113,8 @@ const palletLocations = [
     id: "PLT-2024-002",
     type: "product",
     status: "stationed",
-    currentLocation: "印刷工程-ST03",
-    productInfo: "企業パンフレット 3000部",
+    currentLocation: "加工工程-ST03",
+    productInfo: "板ばね部品 3000個",
     weight: 85.2,
     dimensions: "100x80x45cm",
     lastMoved: "2024-01-16 08:45",
@@ -152,7 +152,7 @@ const rackLocations = [
     position: 2,
     status: "occupied",
     palletId: "PLT-2023-458",
-    productInfo: "在庫品 - カタログ印刷物",
+    productInfo: "在庫品 - 精密ばね部品",
     capacity: "1パレット",
     lastAccess: "2024-01-14 15:30",
     temperature: 22.5,
@@ -448,8 +448,8 @@ export function LogisticsManagement() {
                           <SelectContent>
                             <SelectItem value="production-a">生産エリアA</SelectItem>
                             <SelectItem value="production-b">生産エリアB</SelectItem>
-                            <SelectItem value="printing">印刷工程</SelectItem>
-                            <SelectItem value="binding">製本工程</SelectItem>
+                            <SelectItem value="printing">加工工程</SelectItem>
+                            <SelectItem value="binding">組立工程</SelectItem>
                             <SelectItem value="quality">品質検査エリア</SelectItem>
                           </SelectContent>
                         </Select>
@@ -464,7 +464,7 @@ export function LogisticsManagement() {
                             <SelectItem value="warehouse-a">自動倉庫A</SelectItem>
                             <SelectItem value="warehouse-b">自動倉庫B</SelectItem>
                             <SelectItem value="shipping">出荷エリア</SelectItem>
-                            <SelectItem value="binding">製本工程</SelectItem>
+                            <SelectItem value="binding">組立工程</SelectItem>
                             <SelectItem value="quality">品質検査エリア</SelectItem>
                           </SelectContent>
                         </Select>

@@ -10,8 +10,8 @@ export function ProductionScheduler() {
   const scheduleData = [
     {
       id: "J001",
-      title: "松山市役所 広報誌印刷",
-      machine: "輪転機1号機",
+      title: "トヨタ向け圧縮ばね製造",
+      machine: "CNCばね成形機A",
       startTime: "08:00",
       endTime: "12:00",
       status: "in-progress",
@@ -21,8 +21,8 @@ export function ProductionScheduler() {
     },
     {
       id: "J002",
-      title: "企業パンフレット印刷",
-      machine: "印刷機1号機",
+      title: "引張ばね製造",
+      machine: "ばね巻き機B",
       startTime: "09:30",
       endTime: "15:00",
       status: "in-progress",
@@ -32,8 +32,8 @@ export function ProductionScheduler() {
     },
     {
       id: "J003",
-      title: "チラシ印刷 1000部",
-      machine: "印刷機2号機",
+      title: "板ばね部品加工",
+      machine: "プレス機1号機",
       startTime: "13:00",
       endTime: "16:00",
       status: "scheduled",
@@ -43,8 +43,8 @@ export function ProductionScheduler() {
     },
     {
       id: "J004",
-      title: "製本作業",
-      machine: "後加工機",
+      title: "温度センサー組立",
+      machine: "組立・検査ライン",
       startTime: "14:00",
       endTime: "17:00",
       status: "scheduled",
@@ -54,7 +54,7 @@ export function ProductionScheduler() {
     },
   ]
 
-  const machines = ["輪転機1号機", "輪転機2号機", "印刷機1号機", "印刷機2号機", "後加工機"]
+  const machines = ["CNCばね成形機A", "ばね巻き機B", "プレス機1号機", "深絞りプレス機", "組立・検査ライン"]
 
   return (
     <div className="space-y-6">

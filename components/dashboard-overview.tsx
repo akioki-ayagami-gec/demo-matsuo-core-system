@@ -74,19 +74,19 @@ export function DashboardOverview() {
   const todaySchedule = [
     {
       time: "09:00",
-      task: "印刷機1号機 - パンフレット印刷",
+      task: "ばね巻き機B - 引張ばね製造",
       status: "completed",
       operator: "佐藤花子",
-      details: "企業パンフレット 2000部",
+      details: "引張ばね φ2.5 2000個",
     },
     {
       time: "11:00",
-      task: "輪転機2号機 - チラシ印刷",
+      task: "CNCばね成形機A - 圧縮ばね加工",
       status: "in-progress",
       operator: "田中太郎",
-      details: "販促チラシ 5000部",
+      details: "トヨタ向け圧縮ばね 5000個",
     },
-    { time: "14:00", task: "後加工 - 製本作業", status: "pending", operator: "鈴木一郎", details: "冊子製本 1000冊" },
+    { time: "14:00", task: "組立ライン - センサー組立", status: "pending", operator: "鈴木一郎", details: "温度センサー組立 500個" },
     {
       time: "16:00",
       task: "品質検査 - 最終チェック",
@@ -379,11 +379,11 @@ export function DashboardOverview() {
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="quickCustomer">顧客名</Label>
-                    <Input id="quickCustomer" placeholder="松山市役所" />
+                    <Input id="quickCustomer" placeholder="トヨタ自動車株式会社" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="quickProject">案件名</Label>
-                    <Input id="quickProject" placeholder="市政だより印刷" />
+                    <Input id="quickProject" placeholder="圧縮ばね φ3.0×L15" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="quickDue">納期</Label>

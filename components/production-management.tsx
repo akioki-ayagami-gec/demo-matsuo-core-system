@@ -37,17 +37,17 @@ export function ProductionManagement() {
   const machineStatus = [
     {
       id: 1,
-      name: "輪転機1号機",
+      name: "CNCばね成形機A",
       status: "running",
       progress: 85,
       operator: "田中太郎",
-      job: "松山市役所 市政だより印刷",
+      job: "トヨタ向け圧縮ばね加工",
       startTime: "08:00",
       estimatedEnd: "12:00",
     },
     {
       id: 2,
-      name: "輪転機2号機",
+      name: "プレス機1号機",
       status: "maintenance",
       progress: 0,
       operator: "-",
@@ -57,17 +57,17 @@ export function ProductionManagement() {
     },
     {
       id: 3,
-      name: "印刷機1号機",
+      name: "ばね巻き機B",
       status: "running",
       progress: 45,
       operator: "佐藤花子",
-      job: "企業パンフレット印刷",
+      job: "引張ばね製造",
       startTime: "09:30",
       estimatedEnd: "16:00",
     },
     {
       id: 4,
-      name: "印刷機2号機",
+      name: "深絞りプレス機",
       status: "idle",
       progress: 0,
       operator: "-",
@@ -77,11 +77,11 @@ export function ProductionManagement() {
     },
     {
       id: 5,
-      name: "後加工機",
+      name: "組立・検査ライン",
       status: "running",
       progress: 92,
       operator: "鈴木一郎",
-      job: "チラシ製本作業",
+      job: "温度センサー組立作業",
       startTime: "10:00",
       estimatedEnd: "14:00",
     },
@@ -90,45 +90,45 @@ export function ProductionManagement() {
   const todayJobs = [
     {
       id: "J001",
-      title: "松山市役所 広報誌印刷",
-      machine: "輪転機1号機",
+      title: "トヨタ向け圧縮ばね製造",
+      machine: "CNCばね成形機A",
       status: "in-progress",
       progress: 85,
       startTime: "08:00",
       estimatedEnd: "12:00",
       priority: "high",
       operator: "田中太郎",
-      quantity: "5000部",
-      paperType: "上質紙 A4",
-      colors: "4色",
+      quantity: "5000個",
+      paperType: "ピアノ線 SWP-A φ3.0",
+      colors: "亜鉛メッキ",
     },
     {
       id: "J002",
-      title: "企業パンフレット印刷",
-      machine: "印刷機1号機",
+      title: "引張ばね製造",
+      machine: "ばね巻き機B",
       status: "in-progress",
       progress: 45,
       startTime: "09:30",
       estimatedEnd: "15:00",
       priority: "medium",
       operator: "佐藤花子",
-      quantity: "2000部",
-      paperType: "コート紙 A4",
-      colors: "4色",
+      quantity: "2000個",
+      paperType: "硬鋼線 SWC φ2.5",
+      colors: "無処理",
     },
     {
       id: "J003",
-      title: "チラシ印刷 1000部",
-      machine: "印刷機2号機",
+      title: "温度センサー組立",
+      machine: "組立・検査ライン",
       status: "pending",
       progress: 0,
       startTime: "13:00",
       estimatedEnd: "16:00",
       priority: "low",
       operator: "未割当",
-      quantity: "1000部",
-      paperType: "普通紙 B5",
-      colors: "2色",
+      quantity: "500個",
+      paperType: "バイメタル",
+      colors: "ニッケルメッキ",
     },
   ]
 
@@ -153,7 +153,7 @@ export function ProductionManagement() {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="machine">機械名</Label>
-                  <Input id="machine" placeholder="輪転機1号機" />
+                  <Input id="machine" placeholder="CNCばね成形機A" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="operator">作業者</Label>
@@ -198,7 +198,7 @@ export function ProductionManagement() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="newMachine">変更先機械</Label>
-                  <Input id="newMachine" placeholder="印刷機2号機" />
+                  <Input id="newMachine" placeholder="ばね巻き機B" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="reason">変更理由</Label>
@@ -447,11 +447,11 @@ export function ProductionManagement() {
                             <p className="text-sm font-medium">{job.quantity}</p>
                           </div>
                           <div>
-                            <Label>用紙</Label>
+                            <Label>材質</Label>
                             <p className="text-sm font-medium">{job.paperType}</p>
                           </div>
                           <div>
-                            <Label>色数</Label>
+                            <Label>表面処理</Label>
                             <p className="text-sm font-medium">{job.colors}</p>
                           </div>
                           <div>

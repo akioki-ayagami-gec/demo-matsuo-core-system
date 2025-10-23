@@ -11,81 +11,107 @@ export function ProductCatalog() {
   const products = [
     {
       id: "P001",
-      name: "A4チラシ印刷",
-      category: "チラシ・フライヤー",
-      size: "A4 (210×297mm)",
-      paper: "コート紙 90kg",
-      colors: "4色カラー",
-      unitPrice: "¥12",
-      minQuantity: 100,
-      maxQuantity: 50000,
-      productionTime: "3-5営業日",
+      name: "圧縮コイルばね",
+      category: "精密線ばね品",
+      size: "φ3.0×L15mm",
+      paper: "ピアノ線 SWP-A",
+      colors: "亜鉛メッキ",
+      unitPrice: "¥8",
+      minQuantity: 1000,
+      maxQuantity: 100000,
+      productionTime: "5-7営業日",
       status: "active",
     },
     {
       id: "P002",
-      name: "A3ポスター印刷",
-      category: "ポスター",
-      size: "A3 (297×420mm)",
-      paper: "マット紙 135kg",
-      colors: "4色カラー",
-      unitPrice: "¥45",
-      minQuantity: 50,
-      maxQuantity: 10000,
+      name: "引張コイルばね",
+      category: "精密線ばね品",
+      size: "φ2.5×L20mm",
+      paper: "硬鋼線 SWC",
+      colors: "無処理",
+      unitPrice: "¥12",
+      minQuantity: 500,
+      maxQuantity: 50000,
       productionTime: "5-7営業日",
       status: "active",
     },
     {
       id: "P003",
-      name: "パンフレット印刷",
-      category: "パンフレット・カタログ",
-      size: "A4 (210×297mm)",
-      paper: "上質紙 70kg",
-      colors: "4色カラー",
-      unitPrice: "¥180",
-      minQuantity: 100,
-      maxQuantity: 20000,
+      name: "板ばね部品",
+      category: "精密薄板ばね品",
+      size: "30×15×0.3mm",
+      paper: "ステンレス SUS304",
+      colors: "研磨仕上げ",
+      unitPrice: "¥25",
+      minQuantity: 500,
+      maxQuantity: 50000,
       productionTime: "7-10営業日",
       status: "active",
     },
     {
       id: "P004",
-      name: "名刺印刷",
-      category: "名刺・カード",
-      size: "91×55mm",
-      paper: "アートポスト 220kg",
-      colors: "4色カラー",
-      unitPrice: "¥8",
-      minQuantity: 100,
-      maxQuantity: 5000,
-      productionTime: "2-3営業日",
+      name: "バイメタル温度センサー",
+      category: "温度センサー品",
+      size: "φ8.0×L25mm",
+      paper: "バイメタル",
+      colors: "ニッケルメッキ",
+      unitPrice: "¥45",
+      minQuantity: 200,
+      maxQuantity: 20000,
+      productionTime: "10-14営業日",
       status: "active",
     },
     {
       id: "P005",
-      name: "冊子印刷（中綴じ）",
-      category: "冊子・書籍",
-      size: "A4 (210×297mm)",
-      paper: "上質紙 70kg",
-      colors: "4色カラー",
-      unitPrice: "¥320",
-      minQuantity: 50,
+      name: "形状記憶合金ばね",
+      category: "温度センサー品",
+      size: "φ1.5×L10mm",
+      paper: "形状記憶合金",
+      colors: "無処理",
+      unitPrice: "¥120",
+      minQuantity: 100,
+      maxQuantity: 10000,
+      productionTime: "14-21営業日",
+      status: "active",
+    },
+    {
+      id: "P006",
+      name: "深絞り金属カップ",
+      category: "小物深絞り品",
+      size: "φ12×H8mm",
+      paper: "アルミニウム A1050",
+      colors: "アルマイト処理",
+      unitPrice: "¥18",
+      minQuantity: 500,
+      maxQuantity: 30000,
+      productionTime: "7-10営業日",
+      status: "active",
+    },
+    {
+      id: "P007",
+      name: "精密組立アセンブリ",
+      category: "精密組み付け品",
+      size: "20×15×10mm",
+      paper: "複合材料",
+      colors: "塗装仕上げ",
+      unitPrice: "¥85",
+      minQuantity: 100,
       maxQuantity: 10000,
       productionTime: "10-14営業日",
       status: "active",
     },
     {
-      id: "P006",
-      name: "封筒印刷",
-      category: "封筒・袋",
-      size: "角2 (240×332mm)",
-      paper: "クラフト紙 85kg",
-      colors: "1色印刷",
-      unitPrice: "¥25",
-      minQuantity: 100,
-      maxQuantity: 20000,
-      productionTime: "5-7営業日",
-      status: "inactive",
+      id: "P008",
+      name: "樹脂成形部品",
+      category: "精密樹脂成形品",
+      size: "25×20×5mm",
+      paper: "ABS樹脂",
+      colors: "黒色成形",
+      unitPrice: "¥32",
+      minQuantity: 500,
+      maxQuantity: 50000,
+      productionTime: "7-10営業日",
+      status: "active",
     },
   ]
 
@@ -93,12 +119,13 @@ export function ProductCatalog() {
 
   const getCategoryBadge = (category: string) => {
     const colors = {
-      チラシ・フライヤー: "bg-blue-600",
-      ポスター: "bg-green-600",
-      パンフレット・カタログ: "bg-purple-600",
-      名刺・カード: "bg-orange-600",
-      冊子・書籍: "bg-red-600",
-      封筒・袋: "bg-gray-600",
+      精密線ばね品: "bg-blue-600",
+      精密薄板ばね品: "bg-green-600",
+      温度センサー品: "bg-purple-600",
+      小物深絞り品: "bg-orange-600",
+      精密組み付け品: "bg-red-600",
+      精密樹脂成形品: "bg-cyan-600",
+      金型・専用機: "bg-gray-600",
     }
     return <Badge className={colors[category as keyof typeof colors] || "bg-gray-600"}>{category}</Badge>
   }
@@ -118,12 +145,12 @@ export function ProductCatalog() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold">商品管理</h2>
-          <p className="text-muted-foreground">印刷商品の仕様・価格管理</p>
+          <h2 className="text-2xl font-bold">製品管理</h2>
+          <p className="text-muted-foreground">精密部品・ばね製品の仕様・価格管理</p>
         </div>
         <Button>
           <Plus className="h-4 w-4 mr-2" />
-          新規商品登録
+          新規製品登録
         </Button>
       </div>
 
@@ -131,7 +158,7 @@ export function ProductCatalog() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">総商品数</CardTitle>
+            <CardTitle className="text-sm font-medium">総製品数</CardTitle>
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -180,15 +207,15 @@ export function ProductCatalog() {
       {/* Product List */}
       <Card>
         <CardHeader>
-          <CardTitle>商品一覧</CardTitle>
-          <CardDescription>印刷商品の詳細仕様と価格情報</CardDescription>
+          <CardTitle>製品一覧</CardTitle>
+          <CardDescription>精密部品の詳細仕様と価格情報</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="rounded-md border">
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>商品名</TableHead>
+                  <TableHead>製品名</TableHead>
                   <TableHead>カテゴリー</TableHead>
                   <TableHead>仕様</TableHead>
                   <TableHead>単価</TableHead>
@@ -227,7 +254,7 @@ export function ProductCatalog() {
                     <TableCell className="font-medium">{product.unitPrice}</TableCell>
                     <TableCell className="text-sm">
                       <p>
-                        {product.minQuantity.toLocaleString()} - {product.maxQuantity.toLocaleString()}部
+                        {product.minQuantity.toLocaleString()} - {product.maxQuantity.toLocaleString()}個
                       </p>
                     </TableCell>
                     <TableCell className="text-sm">{product.productionTime}</TableCell>

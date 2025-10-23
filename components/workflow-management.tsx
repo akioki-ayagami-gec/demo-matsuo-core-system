@@ -25,10 +25,10 @@ const workflowStages = [
 const workflowItems = [
   {
     id: "WF001",
-    title: "松山市役所 広報誌印刷",
+    title: "トヨタ向け圧縮ばね製造",
     currentStage: "main-design",
     priority: "high",
-    customer: "松山市役所",
+    customer: "トヨタ自動車株式会社",
     assignee: "田中太郎",
     dueDate: "2024-01-15",
     progress: 60,
@@ -41,10 +41,10 @@ const workflowItems = [
   },
   {
     id: "WF002",
-    title: "愛媛県庁 パンフレット制作",
+    title: "デンソー向け温度センサー製造",
     currentStage: "production",
     priority: "medium",
-    customer: "愛媛県庁",
+    customer: "株式会社デンソー",
     assignee: "山田花子",
     dueDate: "2024-01-20",
     progress: 80,
@@ -58,10 +58,10 @@ const workflowItems = [
   },
   {
     id: "WF003",
-    title: "企業カタログ印刷",
+    title: "アイシン向け板ばね製造",
     currentStage: "temp-design",
     priority: "low",
-    customer: "株式会社ABC",
+    customer: "アイシン株式会社",
     assignee: "鈴木一郎",
     dueDate: "2024-01-25",
     progress: 30,

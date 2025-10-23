@@ -11,84 +11,84 @@ export function CustomerManagement() {
   const customers = [
     {
       id: "C001",
-      name: "松山市役所",
-      type: "官公庁",
-      contact: "総務課 田中様",
-      phone: "089-948-6688",
-      email: "soumu@city.matsuyama.ehime.jp",
-      address: "愛媛県松山市二番町四丁目7-2",
-      totalOrders: 45,
-      totalAmount: "¥12,500,000",
+      name: "トヨタ自動車株式会社",
+      type: "自動車メーカー",
+      contact: "調達部 田中様",
+      phone: "0565-28-2121",
+      email: "procurement@toyota.co.jp",
+      address: "愛知県豊田市トヨタ町1",
+      totalOrders: 245,
+      totalAmount: "¥185,000,000",
       lastOrderDate: "2024-01-15",
       paymentTerms: "月末締め翌月末払い",
       status: "active",
     },
     {
       id: "C002",
-      name: "愛媛県庁",
-      type: "官公庁",
-      contact: "広報広聴課 佐藤様",
-      phone: "089-912-2240",
-      email: "kouhou@pref.ehime.lg.jp",
-      address: "愛媛県松山市一番町4-4-2",
-      totalOrders: 32,
-      totalAmount: "¥8,900,000",
+      name: "株式会社デンソー",
+      type: "Tier1サプライヤー",
+      contact: "購買部 佐藤様",
+      phone: "0566-25-5511",
+      email: "kouhai@denso.co.jp",
+      address: "愛知県刈谷市昭和町1-1",
+      totalOrders: 128,
+      totalAmount: "¥92,500,000",
       lastOrderDate: "2024-01-18",
       paymentTerms: "月末締め翌月末払い",
       status: "active",
     },
     {
       id: "C003",
-      name: "地元企業A株式会社",
-      type: "一般企業",
-      contact: "営業部 鈴木様",
-      phone: "089-123-4567",
-      email: "suzuki@company-a.co.jp",
-      address: "愛媛県松山市○○町1-2-3",
-      totalOrders: 18,
-      totalAmount: "¥3,200,000",
+      name: "アイシン株式会社",
+      type: "Tier1サプライヤー",
+      contact: "資材部 鈴木様",
+      phone: "0566-24-8441",
+      email: "suzuki@aisin.co.jp",
+      address: "愛知県刈谷市朝日町2-1",
+      totalOrders: 96,
+      totalAmount: "¥68,200,000",
       lastOrderDate: "2024-01-20",
       paymentTerms: "月末締め翌々月10日払い",
       status: "active",
     },
     {
       id: "C004",
-      name: "松山商工会議所",
-      type: "団体",
-      contact: "事務局 山田様",
-      phone: "089-941-4111",
-      email: "info@matsuyama-cci.or.jp",
-      address: "愛媛県松山市南堀端町5-1",
-      totalOrders: 24,
-      totalAmount: "¥4,800,000",
+      name: "株式会社豊田自動織機",
+      type: "自動車部品メーカー",
+      contact: "調達課 山田様",
+      phone: "0566-22-2511",
+      email: "yamada@toyota-shokki.co.jp",
+      address: "愛知県刈谷市豊田町2-1",
+      totalOrders: 74,
+      totalAmount: "¥54,800,000",
       lastOrderDate: "2024-01-22",
       paymentTerms: "月末締め翌月末払い",
       status: "active",
     },
     {
       id: "C005",
-      name: "地元企業B有限会社",
-      type: "一般企業",
-      contact: "代表取締役 高橋様",
-      phone: "089-987-6543",
-      email: "takahashi@company-b.com",
-      address: "愛媛県松山市△△町4-5-6",
-      totalOrders: 12,
-      totalAmount: "¥1,800,000",
+      name: "トヨタ車体株式会社",
+      type: "自動車メーカー",
+      contact: "購買部 高橋様",
+      phone: "0566-36-2121",
+      email: "takahashi@toyota-body.co.jp",
+      address: "愛知県刈谷市一里山町金山100",
+      totalOrders: 52,
+      totalAmount: "¥38,900,000",
       lastOrderDate: "2024-01-25",
       paymentTerms: "月末締め翌月末払い",
-      status: "inactive",
+      status: "active",
     },
   ]
 
   const getCustomerTypeBadge = (type: string) => {
     switch (type) {
-      case "官公庁":
-        return <Badge className="bg-blue-600">官公庁</Badge>
-      case "一般企業":
-        return <Badge variant="default">一般企業</Badge>
-      case "団体":
-        return <Badge variant="secondary">団体</Badge>
+      case "自動車メーカー":
+        return <Badge className="bg-blue-600">自動車メーカー</Badge>
+      case "Tier1サプライヤー":
+        return <Badge variant="default">Tier1サプライヤー</Badge>
+      case "自動車部品メーカー":
+        return <Badge className="bg-green-600">自動車部品メーカー</Badge>
       default:
         return <Badge variant="outline">{type}</Badge>
     }

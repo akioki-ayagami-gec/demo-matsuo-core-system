@@ -39,42 +39,42 @@ export function OrderManagement() {
   const urgentOrders = [
     {
       id: "O001",
-      customer: "松山市役所",
-      title: "市政だより 3月号",
+      customer: "トヨタ自動車株式会社",
+      title: "圧縮コイルばね φ3.0×L15",
       dueDate: "2024-02-05",
       status: "urgent",
-      amount: "¥450,000",
-      quantity: "10000部",
-      paperType: "上質紙 A4",
-      colors: "4色",
+      amount: "¥850,000",
+      quantity: "50000個",
+      paperType: "ピアノ線 SWP-A φ3.0",
+      colors: "亜鉛メッキ",
       contact: "田中部長",
-      phone: "089-948-6688",
+      phone: "0565-28-2121",
     },
     {
       id: "O002",
-      customer: "愛媛県庁",
-      title: "観光パンフレット",
+      customer: "株式会社デンソー",
+      title: "温度センサー バイメタル式",
       dueDate: "2024-02-07",
       status: "urgent",
-      amount: "¥320,000",
-      quantity: "5000部",
-      paperType: "コート紙 A4",
-      colors: "4色",
+      amount: "¥620,000",
+      quantity: "8000個",
+      paperType: "バイメタル",
+      colors: "ニッケルメッキ",
       contact: "佐藤課長",
-      phone: "089-912-2500",
+      phone: "0566-25-5511",
     },
     {
       id: "O003",
-      customer: "地元企業A",
-      title: "会社案内パンフレット",
+      customer: "アイシン株式会社",
+      title: "板ばね部品 SUS304",
       dueDate: "2024-02-10",
       status: "high",
-      amount: "¥180,000",
-      quantity: "2000部",
-      paperType: "マット紙 A4",
-      colors: "4色",
-      contact: "鈴木社長",
-      phone: "089-123-4567",
+      amount: "¥480,000",
+      quantity: "15000個",
+      paperType: "ステンレス SUS304 t0.3",
+      colors: "研磨仕上げ",
+      contact: "鈴木部長",
+      phone: "0566-24-8441",
     },
   ]
 
@@ -82,7 +82,7 @@ export function OrderManagement() {
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <p className="text-muted-foreground">顧客管理・受注処理・商品管理</p>
+        <p className="text-muted-foreground">顧客管理・受注処理・製品管理</p>
         <div className="flex gap-2">
           <Dialog>
             <DialogTrigger asChild>
